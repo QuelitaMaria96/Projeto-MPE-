@@ -1,0 +1,413 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f1f5f9;
+  color: #173b57;
+}
+
+a {
+  overflow-wrap: anywhere;
+}
+
+.header {
+  background: linear-gradient(135deg, #173b57, #245d7d);
+  color: white;
+  padding: 32px 20px;
+}
+
+.header-conteudo {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 78px;
+  height: 78px;
+  border: 2px solid white;
+  border-radius: 18px;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.header h1 {
+  margin: 0 0 10px;
+  font-size: clamp(24px, 4vw, 36px);
+}
+
+.header p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.introducao {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.introducao h2 {
+  font-size: 28px;
+}
+
+.introducao p {
+  color: #526477;
+  line-height: 1.8;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px #00000012;
+  border-top: 4px solid #3478a8;
+}
+
+.simbolo {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #245d7d;
+  font-size: 21px;
+}
+
+.card p {
+  line-height: 1.7;
+  color: #526477;
+}
+
+.secao {
+  margin-top: 35px;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px #00000012;
+}
+
+.secao > h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.secao > p {
+  line-height: 1.7;
+  color: #526477;
+}
+
+.mapa iframe {
+  display: block;
+  margin: 20px 0;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.link-mapa {
+  display: inline-block;
+  color: #1769aa;
+  font-weight: bold;
+  line-height: 1.8;
+}
+
+.status {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 6px solid;
+}
+
+.status h3 {
+  margin-top: 0;
+}
+
+.status p {
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+.status.aguardando {
+  background: #edf2f7;
+  border-color: #64748b;
+}
+
+.status.normal {
+  background: #e8f5e9;
+  border-color: #388e3c;
+}
+
+.status.atencao {
+  background: #fff4d6;
+  border-color: #e6a000;
+}
+
+.status.perigo {
+  background: #fde8e7;
+  border-color: #c62828;
+}
+
+.observacao {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #526477;
+}
+
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.botoes button,
+.botao-secundario {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.botoes button {
+  background: #173b57;
+  color: white;
+}
+
+.botoes button:hover {
+  background: #285b7d;
+}
+
+.botao-secundario {
+  margin-top: 12px;
+  background: #e2e8f0;
+  color: #173b57;
+}
+
+.botao-secundario:hover {
+  background: #cbd5e1;
+}
+
+.botoes button:focus-visible,
+.botao-secundario:focus-visible,
+a:focus-visible {
+  outline: 3px solid #e6a000;
+  outline-offset: 3px;
+}
+
+.fontes a {
+  color: #1769aa;
+  font-weight: bold;
+  line-height: 1.7;
+}
+
+.links-oficiais {
+  display: grid;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.footer {
+  background: #173b57;
+  color: white;
+  text-align: center;
+  padding: 22px 20px;
+  margin-top: 20px;
+}
+
+.footer p {
+  margin: 6px 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .header-conteudo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    width: 65px;
+    height: 65px;
+    font-size: 23px;
+  }
+
+  .container {
+    padding: 22px 14px;
+  }
+
+  .secao {
+    padding: 18px;
+  }
+
+  .botoes {
+    flex-direction: column;
+  }
+
+  .botoes button,
+  .botao-secundario {
+    width: 100%;
+  }
+
+  .mapa iframe {
+    height: 320px;
+  }
+}
+
+.painel-intro {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 24px;
+}
+
+.indicadores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.indicador {
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid #dbe5ee;
+  border-radius: 12px;
+}
+
+.indicador-icone {
+  font-size: 28px;
+}
+
+.indicador h3 {
+  margin-bottom: 10px;
+  color: #245d7d;
+}
+
+.valor-indisponivel {
+  font-weight: bold;
+  color: #8a5700;
+  line-height: 1.5;
+}
+
+.indicador > span:last-child {
+  display: block;
+  color: #526477;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.aviso-dados {
+  margin-top: 22px;
+  padding: 16px;
+  background: #fff4d6;
+  border-left: 5px solid #e6a000;
+  border-radius: 8px;
+  line-height: 1.7;
+}
+
+.links-monitoramento {
+  display: grid;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.links-monitoramento a {
+  color: #1769aa;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+/* Painel de monitoramento do MPE */
+.painel-monitoramento {
+  margin-top: 30px;
+}
+
+.painel-monitoramento > p {
+  line-height: 1.7;
+}
+
+.indicadores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+  margin: 24px 0;
+}
+
+.indicador {
+  background: #f0f7fc;
+  border: 1px solid #cbdfea;
+  border-top: 4px solid #2476a5;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.indicador:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 14px #00000015;
+}
+
+.indicador h3 {
+  color: #174e70;
+  margin-top: 0;
+}
+
+.indicador p {
+  color: #805600;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.aviso-dados {
+  background: #fff4d6;
+  border-left: 5px solid #e6a000;
+  border-radius: 8px;
+  padding: 16px;
+  line-height: 1.7;
+}
+
+.links-monitoramento {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.links-monitoramento a {
+  display: inline-block;
+  color: #1769aa;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.links-monitoramento a:hover {
+  text-decoration: underline;
+}
